@@ -1,0 +1,221 @@
+version: "3.0"
+
+stories:
+
+# - story: corona world info path
+#   steps:
+#   - intent: World
+#   - action: action_corona_World
+
+# - story: corona country info path
+#   steps:
+#   - intent: countrywise_stats
+#   - action: action_corona_countries
+
+# - story: corona USA info path
+#   steps:
+#   - intent: corona_USA_nation
+#   - action: action_corona_US
+
+# - story: corona USA states path
+#   steps:
+#   - intent: corona_state
+#   - action: action_corona_state
+ 
+- story: path1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: first_name
+    entities:
+     - firstname: "firstname"
+  - action: action_save_firstname
+  - action: utter_homestate
+  - intent: home_state
+    entities:
+     - homestate: "homestate"
+  - action: action_save_homestate
+  - intent: storedatabase
+  - action: action_store
+  - action: utter_homestats
+  - intent: affirm
+  - action: action_corona_homestate
+  - action: utter_intro
+  - action: utter_choice
+  - intent: option_stats
+  - action: utter_stats_options
+  - intent: option_global
+  - action: action_corona_World
+  - action: utter_country_stats
+  - intent: countrywise_stats
+    entities:
+     - country: "country"
+  - action: action_corona_countries
+  - action: utter_statename
+  - intent: corona_state
+    entities:
+     - state: "state"
+  - action: action_corona_state
+  - action: utter_questions
+
+- story: path2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: first_name
+    entities:
+     - firstname: "firstname"
+  - action: action_save_firstname
+  - action: utter_homestate
+  - intent: home_state
+    entities:
+     - homestate: "homestate"
+  - action: action_save_homestate
+  - intent: storedatabase
+  - action: action_store
+  - action: utter_homestats
+  - intent: deny
+  - action: utter_intro
+  - action: utter_choice
+  - intent: option_stats
+  - action: utter_stats_options
+  - intent: option_global
+  - action: action_corona_World
+  - action: utter_country_stats
+  - intent: countrywise_stats
+    entities:
+     - country: "country"
+  - action: action_corona_countries
+  - action: utter_statename
+  - intent: corona_state
+    entities:
+     - state: "state"
+  - action: action_corona_state
+  - action: utter_questions
+ 
+- story: path3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: first_name
+    entities:
+     - firstname: "firstname"
+  - action: action_save_firstname
+  - action: utter_homestate
+  - intent: home_state
+    entities:
+     - homestate: "homestate"
+  - action: action_save_homestate
+  - intent: storedatabase
+  - action: action_store
+  - action: utter_homestats
+  - intent: deny
+  - action: utter_intro
+  - action: utter_choice
+  - intent: option_info
+  - action: utter_questions
+
+- story: path4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: first_name
+    entities:
+     - firstname: "firstname"
+  - action: action_save_firstname
+  - action: utter_homestate
+  - intent: deny
+  - action: utter_intro
+  - action: utter_choice
+  - intent: option_stats
+  - action: utter_stats_options
+  - intent: option_global
+  - action: action_corona_World
+  - action: utter_country_stats
+  - intent: countrywise_stats
+    entities:
+     - country: "country"
+  - action: action_corona_countries
+  - action: utter_statename
+  - intent: corona_state
+    entities:
+     - state: "state"
+  - action: action_corona_state
+  - action: utter_questions
+
+- story: def_corona_path
+  steps:
+  - intent: what_is_corona
+  - action: utter_corona
+  - intent: concern
+  - action: utter_concern
+
+- story: symptoms_path
+  steps:
+  - intent: symptoms
+  - action: utter_symptoms
+
+- story: who_risk path
+  steps:
+  - intent: who_at_risk
+  - action: utter_who_at_risk
+
+- story: long_term_effects_path
+  steps:
+  - intent: long_term_effects
+  - action: utter_long_term_effects
+
+- story: prevention_path
+  steps:
+  - intent: prevention
+  - action: utter_prevent
+
+- story: when_test_path
+  steps:
+  - intent: when_test
+  - action: utter_when_test
+
+- story: which_tests_path
+  steps:
+  - intent: which_tests
+  - action: utter_which_tests
+
+- story: past_covid_path
+  steps:
+  - intent: past_covid
+  - action: utter_past_covid
+
+- story: vaccine_path
+  steps:
+  - intent: Vaccination
+  - action: utter_Vaccination
+
+- story: incubation_path
+  steps:
+  - intent: incubation
+  - action: utter_incubation
+
+- story: treatment_path
+  steps:
+  - intent: treatment
+  - action: utter_treatment
+
+- story: antibiotic_path
+  steps:
+  - intent: antibiotics
+  - action: utter_antibiotic
+
+- story: thanks_path
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+
+- story: goodbye_path
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: bot_challenge_path
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
