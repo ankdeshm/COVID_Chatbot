@@ -1,8 +1,6 @@
 # covbot
 A virtual assistant powered by **RASA 3.0** which provides information on COVID-19 and real-time statistics of COVID-19 around the globe.
 
-The bot is deployed on slack **3 - CMPE 252 Chatbot Central**.
-
 **Instructions to run:**
 1. Create virtual environment using _python3 -m venv ./venv_
 2. Activate the environment using source _./venv/bin/activate_
