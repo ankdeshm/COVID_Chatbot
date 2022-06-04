@@ -1,0 +1,330 @@
+version: "3.0"
+nlu:
+- intent: what_is_corona
+  examples: |
+    - I wanna know about corona virus?
+    - tell me something about corona virus
+    - what is coronavirus?
+    - what is corona virus?
+    - what is corona?
+    - what is COVID-19?
+    - what is this corona virus which everyone is worried about?
+
+- intent: symptoms
+  examples: |
+    - What are the symptoms of it?
+    - what are its symptoms
+    - how to verify that i am suffering from coronavirus
+    - any specific symptoms
+    - What are the symptoms of COVID-19?
+
+- intent: concern
+  examples: |
+    - Is it a matter of concern?
+    - Is it a serious issue?
+    - Is this a major cause?
+
+- intent: who_at_risk
+  examples: |
+    - Who is most at risk of severe illness from COVID-19?
+    - which age group is at higher risk?
+    - Who has higher risk?
+
+- intent: long_term_effects
+  examples: |
+    - Are there long-term effects of COVID-19?
+    - What are the long term effects of COVID-19?
+    - Any long term effects?
+
+- intent: prevention
+  examples: |
+    - how to prevent ourselves from getting in contact with corona virus?
+    - What are the steps to prevent ourselves from getting in contact with coronavirus?
+    - Can you tell me how should I protect myself?
+
+- intent: when_test
+  examples: |
+    - When should I get a test for COVID-19?
+    - when test
+    - When shall I get tested?
+    - When to test?
+
+- intent: which_tests
+  examples: |
+    - which tests
+    - What test should I get to see if I have COVID-19?
+    - Which tests shall I get done?
+
+- intent: past_covid
+  examples: |
+    - I want to find out if I had COVID-19 in the past, what test could I take?
+    - covid in past
+    - How to know if I ever had COVID?
+    - Did I have corona ever?
+
+- intent: Vaccination
+  examples: |
+    - Is there any vaccine available for it?
+    - What about the vaccination?
+    - what medicine should I use If I got infected with coronavirus?
+    - What are the vaccines available for COVID-19?
+
+- intent: incubation
+  examples: |
+    - What is the incubation period for COVID-19?
+    - What is the incubation period for it?
+    - Is there any incubation period for it?
+    - How long does it take to develop symptoms?
+
+- intent: treatment
+  examples: |
+    - Are there treatments for COVID-19?
+    - Any treatment
+    - Can COVID-19 be treated?
+    - Does Corona have a cure?
+
+- intent: antibiotics
+  examples: |
+    - Are antibiotics effective in preventing or treating COVID-19?
+    - antibiotics
+    - Are antibiotics helpful?
+
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: thanks
+  examples: |
+    - Ok, thanks for making me aware about this serious issue.
+    - Thank you so much for awaring me
+    - Thanks a lot.
+    - Thanks
+    - Thank you
+
+- intent: first_name
+  examples: |
+    - My name is [Ankita](firstname)
+    - you can call me [Rohan](firstname)
+    - It's [Teja](firstname)
+    - [Sathvick](firstname) this side
+    - [Ankita](firstname)
+    - [Rohan](firstname)
+    - [Teja](firstname)
+    - [Sathvick](firstname)
+    - [Jorjeta](firstname)
+    - [Aman](firstname)
+    - [Amanbeer](firstname)
+
+- intent: home_state
+  examples: |
+    - [Alabama](homestate)
+    - [Alaska](homestate)
+    - [Arizona](homestate)
+    - [Arkansas](homestate)
+    - [California](homestate)
+    - [Colorado](homestate)
+    - [Connecticut](homestate)
+    - [Delaware](homestate)
+    - [Florida](homestate)
+    - [Georgia](homestate)
+    - [Hawaii](homestate)
+    - [Idaho](homestate)
+    - [Illinois](homestate)
+    - [Indiana](homestate)
+    - [Iowa](homestate)
+    - [Kansas](homestate)
+    - [Kentucky](homestate)
+    - [Louisiana](homestate)
+    - [Maine](homestate)
+    - [Maryland](homestate)
+    - [Massachusetts](homestate)
+    - [Michigan](homestate)
+    - [Minnesota](homestate)
+    - [Mississippi](homestate)
+    - [Missouri](homestate)
+    - [Montana](homestate)
+    - [Nebraska](homestate)
+    - [Nevada](homestate)
+    - [New Hampshire](homestate)
+    - [New Jersey](homestate)
+    - [New Mexico](homestate)
+    - [New York](homestate)
+    - [North Carolina](homestate)
+    - [North Dakota](homestate)
+    - [Ohio](homestate)
+    - [Oklahoma](homestate)
+    - [Oregon](homestate)
+    - [Pennsylvania](homestate)
+    - [Rhode Island](homestate)
+    - [South Carolina](homestate)
+    - [South Dakota](homestate)
+    - [Tennessee](homestate)
+    - [Texas](homestate)
+    - [Utah](homestate)
+    - [Vermont](homestate)
+    - [Virginia](homestate)
+    - [Washington](homestate)
+    - [West Virginia](homestate)
+    - [Wisconsin](homestate)
+    - [Wyoming](homestate)
+    - My home state is [California](homestate)
+    - My home state is [Texas](homestate)
+    - My home state is [Arizona](homestate)
+    - My home state is [Ohio](homestate)
+    - My home state is [Florida](homestate)
+    - My home state is [New York](homestate)
+    - My home state is [Utah](homestate)
+    - My home state is [Nevada](homestate)
+    - My home state is [Iowa](homestate)
+   
+- intent: storedatabase
+  examples: |
+    - yes I want to store my information
+    - yes store my current information
+    - yes store info
+    - yes dump the info
+    - save my info
+    - store my data
+    - yes you may store
+    - yes you can save
+
+- intent: option_info
+  examples: |
+    - 1
+    - info
+    - Information
+    - option 1
+
+- intent: option_stats
+  examples: |
+    - 2
+    - stats
+    - Statistics
+    - option 2
+    
+- intent: corona_USA_nation
+  examples: |
+    - USA
+    - America
+    - US
+    - United States of America
+
+- intent: option_global
+  examples: |
+    - global
+    - World
+    - world
+    - total
+    - overall
+
+- intent: countrywise_stats
+  examples: |
+    - [India](country)
+    - [Germany](country)
+    - [France](country)
+    - [Canada](country)
+    - [China](country)
+
+- intent: corona_state
+  examples: |
+    - I want to know about [Alabama](state)
+    - I want to know about [Alaska](state)
+    - I want to know about [Arizona](state)
+    - I want to know about [Arkansas](state)
+    - I want to know about [California](state)
+    - I want to know about [Colorado](state)
+    - I want to know about [Connecticut](state)
+    - I want to know about [Delaware](state)
+    - I want to know about [Florida](state)
+    - I want to know about [Georgia](state)
+    - I want to know about [Hawaii](state)
+    - I want to know about [Idaho](state)
+    - I want to know about [Illinois](state)
+    - I want to know about [Indiana](state)
+    - I want to know about [Iowa](state)
+    - I want to know about [Kansas](state)
+    - I want to know about [Kentucky](state)
+    - I want to know about [Louisiana](state)
+    - I want to know about [Maine](state)
+    - I want to know about [Maryland](state)
+    - I want to know about [Massachusetts](state)
+    - I want to know about [Michigan](state)
+    - I want to know about [Minnesota](state)
+    - I want to know about [Mississippi](state)
+    - I want to know about [Missouri](state)
+    - I want to know about [Montana](state)
+    - I want to know about [Nebraska](state)
+    - I want to know about [Nevada](state)
+    - I want to know about [New Hampshire](state)
+    - I want to know about [New Jersey](state)
+    - I want to know about [New Mexico](state)
+    - I want to know about [New York](state)
+    - I want to know about [North Carolina](state)
+    - I want to know about [North Dakota](state)
+    - I want to know about [Ohio](state)
+    - I want to know about [Oklahoma](state)
+    - I want to know about [Oregon](state)
+    - I want to know about [Pennsylvania](state)
+    - I want to know about [Rhode Island](state)
+    - I want to know about [South Carolina](state)
+    - I want to know about [South Dakota](state)
+    - I want to know about [Tennessee](state)
+    - I want to know about [Texas](state)
+    - I want to know about [Utah](state)
+    - I want to know about [Vermont](state)
+    - I want to know about [Virginia](state)
+    - I want to know about [Washington](state)
+    - I want to know about [West Virginia](state)
+    - I want to know about [Wisconsin](state)
+    - I want to know about [Wyoming](state)
