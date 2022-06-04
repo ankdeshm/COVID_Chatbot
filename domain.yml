@@ -1,0 +1,134 @@
+version: '3.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- home_state
+- first_name
+- greet
+- goodbye
+- bot_challenge
+- thanks
+- storedatabase
+- option_info
+- option_stats
+- affirm
+- deny
+- what_is_corona
+- symptoms
+- concern
+- prevention
+- Vaccination
+- incubation
+- who_at_risk
+- long_term_effects
+- when_test
+- which_tests
+- past_covid
+- treatment
+- antibiotics
+- option_global
+- countrywise_stats
+- corona_USA_nation
+- corona_state
+
+
+entities:
+- country
+- firstname
+- homestate
+- state
+
+slots:
+  state:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: state
+  firstname:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: firstname
+  homestate:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: homestate
+  country:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: country
+
+responses:
+  utter_greet:
+  - text: Hey! I am Cov-Bot. I can provide information on COVID-19 and COVID-related statistics. Please your first name?
+  utter_homestate:
+  - text: May I know your home state?
+  utter_homestats:
+  - text: Would you like to know the COVID-19 stats of {homestate}?
+  utter_to_ask:
+  - text: Would you like me to save your name and home state?
+  utter_intro:
+  - text: What would you like to know about COVID-19, {firstname}?
+  utter_anythingelse:
+  - text: Would you like to know anything else?
+  utter_choice:
+  - text: 1. Information 2.Statistics
+  utter_stats_options:
+  - text: Would you like to know 1. Global Statistics 2.Contrywise Statistics 3. US Statewise Statistics
+  utter_country_stats:
+  - text: Which country's COVID-19 statistics would you like to know?
+  utter_statename:
+  - text: Please enter the US state name for which you want to know the COVID-19 statistics.
+  utter_questions:
+  - text: I can answer your question related to COVID-19 provided by WHO. What questions would you like to ask?
+  utter_corona:
+  - text: COVID-19 is the disease caused by a new coronavirus called SARS-CoV-2. WHO first learned of this new virus on 31 December 2019, following a report of a cluster of cases of ‘viral pneumonia’ in Wuhan, People’s Republic of China.
+  utter_symptoms:
+  - text: 'The most common symptoms of COVID-19 are Fever, Dry cough, Fatigue. Other symptoms that are less common and may affect some patients include: Loss of taste or smell, Nasal congestion, Conjunctivitis (also known as red eyes), Sore throat, Headache, Muscle or joint pain, Different types of skin rash, Nausea or vomiting, Diarrhea, Chills or dizziness.'
+  utter_who_at_risk:
+  - text: People aged 60 years and over, and those with underlying medical problems like high blood pressure, heart and lung problems, diabetes, obesity or cancer, are at higher risk of developing serious illness. However, anyone can get sick with COVID-19 and become seriously ill or die at any age.
+  utter_long_term_effects:
+  - text: Some people who have had COVID-19, whether they have needed hospitalization or not, continue to experience symptoms, including fatigue, respiratory and neurological symptoms.
+  utter_concern:
+  - text: yes, from the recent information indicates COVID-19 may be passed from person to person. Community spread is being seen, also. Community spread means people have been infected with the virus in a particular area, including some people who are not sure how or where they became infected. COVID-19 has been detected in people throughout China and in over 100 other countries, including the United States.
+  utter_prevent:
+  - text: Stay safe by taking some simple precautions, such as physical distancing, wearing a mask, especially when distancing cannot be maintained, keeping rooms well ventilated, avoiding crowds and close contact, regularly cleaning your hands, and coughing into a bent elbow or tissue. Check local advice where you live and work. Do it all!
+  utter_when_test:
+  - text: Anyone with symptoms should be tested, wherever possible. People who do not have symptoms but have had close contact with someone who is, or may be, infected may also consider testing – contact your local health guidelines and follow their guidance. While a person is waiting for test results, they should remain isolated from others. Where testing capacity is limited, tests should first be done for those at higher risk of infection, such as health workers, and those at higher risk of severe illness such as older people, especially those living in seniors’ residences or long-term care facilities.
+  utter_which_tests:
+  - text: In most situations, a molecular test is used to detect SARS-CoV-2 and confirm infection. Polymerase chain reaction (PCR) is the most commonly used molecular test. Samples are collected from the nose and/or throat with a swab. Molecular tests detect virus in the sample by amplifying viral genetic material to detectable levels. For this reason, a molecular test is used to confirm an active infection, usually within a few days of exposure and around the time that symptoms may begin.
+  utter_past_covid:
+  - text: Antibody tests can tell us whether someone has had an infection in the past, even if they have not had symptoms. Also known as serological tests and usually done on a blood sample, these tests detect antibodies produced in response to an infection. In most people, antibodies start to develop after days to weeks and can indicate if a person has had past infection. Antibody tests cannot be used to diagnose COVID-19 in the early stages of infection or disease but can indicate whether or not someone has had the disease in the past.
+  utter_Vaccination:
+  - text: Yes. The first mass vaccination programme started in early December 2020 and the number of vaccination doses administered is updated on a daily basis at https://ourworldindata.org/covid-vaccinations. At least 13 different vaccines (across 4 platforms) have been administered. Campaigns have started in 206 economies. The Pfizer/BioNtech Comirnaty vaccine was listed for WHO Emergency Use Listing (EUL) on 31 December 2020. The SII/Covishield and AstraZeneca/AZD1222 vaccines (developed by AstraZeneca/Oxford and manufactured by the Serum Institute of India and SK Bio respectively) were given EUL on 16 February. The Janssen/Ad26.COV 2.S developed by Johnson & Johnson, was listed for EUL on 12 March 2021. The Moderna COVID-19 vaccine (mRNA 1273) was listed for EUL on 30 April 2021 and the Sinopharm COVID-19 vaccine was listed for EUL on 7 May 2021. The Sinopharm vaccine is produced by Beijing Bio-Institute of Biological Products Co Ltd, subsidiary of China National Biotec Group (CNBG).
+  utter_incubation:
+  - text: The time from exposure to COVID-19 to the moment when symptoms begin is, on average, 5-6 days and can range from 1-14 days. This is why people who have been exposed to the virus are advised to remain at home and stay away from others, for 14 days, in order to prevent the spread of the virus, especially where testing is not easily available.
+  utter_treatment:
+  - text: Scientists around the world are working to find and develop treatments for COVID-19. Optimal supportive care includes oxygen for severely ill patients and those who are at risk for severe disease and more advanced respiratory support such as ventilation for patients who are critically ill. Dexamethasone is a corticosteroid that can help reduce the length of time on a ventilator and save lives of patients with severe and critical illness. Results from the WHO’s Solidarity Trial indicated that remdesivir, hydroxychloroquine, lopinavir/ritonavir and interferon regimens appear to have little or no effect on 28-day mortality or the in-hospital course of COVID-19 among hospitalized patients. Hydroxychloroquine has not been shown to offer any benefit for treatment of COVID-19. Read our hydroxychloroquine Q&A for more information. WHO does not recommend self-medication with any medicines, including antibiotics, as a prevention or cure for COVID-19. WHO is coordinating efforts to develop treatments for COVID-19 and will continue to provide new information as it becomes available.
+  utter_antibiotic:
+  - text: Antibiotics do not work against viruses; they only work on bacterial infections. COVID-19 is caused by a virus, so antibiotics do not work. Antibiotics should not be used as a means of prevention or treatment of COVID-19. In hospitals, physicians will sometimes use antibiotics to prevent or treat secondary bacterial infections which can be a complication of COVID-19 in severely ill patients. They should only be used as directed by a physician to treat a bacterial infection.
+  utter_thanks:
+  - text: You're welcome and Stay safe.
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+actions:
+- action_corona_US
+- action_corona_US_States
+- action_corona_World
+- action_corona_countries
+- action_corona_homestate
+- action_corona_state
+- action_save_firstname
+- action_save_homestate
+- action_store
+- utter_greet
+- utter_homestate
